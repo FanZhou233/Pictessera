@@ -1,0 +1,74 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.hypothesis/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Virtual environments and local environment files
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+.python-version
+
+# Packaging and build output
+build/
+dist/
+dist-*/
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+*.spec.bak
+
+# Pictessera runtime state and user data
+Pictessera_Data/
+# Legacy state directory retained for pre-Pictessera migrations.
+PhotoMoverQt_Data/
+已删除/
+models/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.jsonl
+*.corrupt
+*.corrupt.*
+*.tmp
+
+# Runtime logs and crash artifacts
+*.log
+*.dmp
+*.stackdump
+crash-reports/
+
+# IDE and editor settings
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Local media used for manual testing
+sample_photos/
+test_photos/
+local-media/

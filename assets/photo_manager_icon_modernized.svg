@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Rainbow Puzzle Photo Library — Modernized</title>
+  <desc id="desc">A modern flat interpretation of the original rainbow puzzle icon, with continuous corners and a minimal photo glyph.</desc>
+
+  <defs>
+    <linearGradient id="icon-surface" x1="170" y1="70" x2="860" y2="960" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.58" stop-color="#F7F7F9"/>
+      <stop offset="1" stop-color="#E9E9EF"/>
+    </linearGradient>
+    <linearGradient id="surface-light" x1="512" y1="100" x2="512" y2="870" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.24"/>
+      <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.09"/>
+    </linearGradient>
+
+    <filter id="icon-shadow" x="-18%" y="-18%" width="136%" height="145%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.17"/>
+    </filter>
+    <filter id="puzzle-shadow" x="-18%" y="-18%" width="136%" height="145%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="15" stdDeviation="17" flood-color="#000000" flood-opacity="0.20"/>
+    </filter>
+
+    <!-- The original silhouette, redrawn with smooth tangent transitions. -->
+    <path id="puzzle-shape" d="
+      M304 216
+      H427
+      C415 194 410 169 416 144
+      C427 96 470 62 520 62
+      C579 62 627 110 627 169
+      C627 186 623 202 616 216
+      H774
+      C836 216 870 250 870 312
+      V400
+      C819 406 780 449 780 500
+      C780 551 819 594 870 600
+      V704
+      C870 766 836 800 774 800
+      H626
+      C620 750 577 712 526 712
+      C475 712 432 750 426 800
+      H304
+      C242 800 208 766 208 704
+      V600
+      C157 594 118 551 118 500
+      C118 449 157 406 208 400
+      V312
+      C208 250 242 216 304 216
+      Z"/>
+
+    <clipPath id="puzzle-clip">
+      <use href="#puzzle-shape"/>
+    </clipPath>
+  </defs>
+
+  <!-- Modern system-icon base. The canvas outside the squircle remains transparent. -->
+  <g filter="url(#icon-shadow)">
+    <path d="M512 44C694 44 794 44 865 82C936 120 976 190 976 316V708C976 834 936 904 865 942C794 980 694 980 512 980C330 980 230 980 159 942C88 904 48 834 48 708V316C48 190 88 120 159 82C230 44 330 44 512 44Z" fill="url(#icon-surface)"/>
+    <path d="M512 54C691 54 788 54 860 91C925 126 966 190 966 316V708C966 829 927 895 860 933C788 970 691 970 512 970C333 970 236 970 164 933C97 895 58 829 58 708V316C58 190 99 126 164 91C236 54 333 54 512 54Z" fill="none" stroke="#FFFFFF" stroke-opacity="0.88" stroke-width="6"/>
+  </g>
+
+  <!-- Six horizontal bands preserve the early-Apple reference without glossy plastic texture. -->
+  <g filter="url(#puzzle-shadow)">
+    <use href="#puzzle-shape" fill="#30D158"/>
+  </g>
+  <g clip-path="url(#puzzle-clip)">
+    <rect x="96" y="54" width="796" height="176" fill="#30D158"/>
+    <rect x="96" y="230" width="796" height="116" fill="#FFD60A"/>
+    <rect x="96" y="346" width="796" height="116" fill="#FF9F0A"/>
+    <rect x="96" y="462" width="796" height="116" fill="#FF453A"/>
+    <rect x="96" y="578" width="796" height="116" fill="#BF5AF2"/>
+    <rect x="96" y="694" width="796" height="132" fill="#0A84FF"/>
+    <rect x="96" y="54" width="796" height="772" fill="url(#surface-light)"/>
+  </g>
+
+  <!-- One restrained outline replaces the old bevel and keeps the edge crisp at taskbar sizes. -->
+  <use href="#puzzle-shape" fill="none" stroke="#000000" stroke-opacity="0.12" stroke-width="8"/>
+  <use href="#puzzle-shape" fill="none" stroke="#FFFFFF" stroke-opacity="0.34" stroke-width="5" transform="translate(0 -2)"/>
+
+  <!-- Photo glyph: a direct product cue, rendered as a single high-contrast silhouette. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M374 347H650C692 347 716 371 716 413V587C716 629 692 653 650 653H374C332 653 308 629 308 587V413C308 371 332 347 374 347Z" stroke="#000000" stroke-opacity="0.16" stroke-width="34"/>
+    <path d="M374 347H650C692 347 716 371 716 413V587C716 629 692 653 650 653H374C332 653 308 629 308 587V413C308 371 332 347 374 347Z" stroke="#FFFFFF" stroke-width="22"/>
+
+    <path d="M337 600L426 505C437 493 450 493 461 505L516 564L574 493C585 480 600 480 611 493L688 585" stroke="#000000" stroke-opacity="0.16" stroke-width="34"/>
+    <path d="M337 600L426 505C437 493 450 493 461 505L516 564L574 493C585 480 600 480 611 493L688 585" stroke="#FFFFFF" stroke-width="22"/>
+  </g>
+  <circle cx="625" cy="426" r="30" fill="#000000" fill-opacity="0.16"/>
+  <circle cx="625" cy="426" r="20" fill="#FFFFFF"/>
+</svg>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Photo Library — Rainbow Stack</title>
+  <desc id="desc">A modern continuous-corner app icon with a rainbow stack of photo cards and a blue smart-classification sparkle.</desc>
+
+  <defs>
+    <linearGradient id="app-surface" x1="180" y1="80" x2="840" y2="950" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.58" stop-color="#F7F7F9"/>
+      <stop offset="1" stop-color="#E9E9EE"/>
+    </linearGradient>
+    <linearGradient id="photo-sky" x1="476" y1="390" x2="476" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF6FF"/>
+      <stop offset="1" stop-color="#CDEBFF"/>
+    </linearGradient>
+    <linearGradient id="blue-mountain" x1="330" y1="486" x2="570" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#64D2FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="green-mountain" x1="472" y1="500" x2="690" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7DE58D"/>
+      <stop offset="1" stop-color="#30D158"/>
+    </linearGradient>
+
+    <filter id="app-shadow" x="-16%" y="-16%" width="132%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="card-shadow" x="-22%" y="-22%" width="150%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+    <filter id="badge-shadow" x="-35%" y="-35%" width="170%" height="180%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0066CC" flood-opacity="0.28"/>
+    </filter>
+
+    <!-- Straight edges plus eased corner transitions keep the cards visually continuous. -->
+    <path id="photo-card" d="M94 0H426C487 0 520 33 520 94V326C520 387 487 420 426 420H94C33 420 0 387 0 326V94C0 33 33 0 94 0Z"/>
+    <clipPath id="photo-window-clip">
+      <path d="M72 0H360C407 0 432 25 432 72V188C432 235 407 260 360 260H72C25 260 0 235 0 188V72C0 25 25 0 72 0Z" transform="translate(258 390)"/>
+    </clipPath>
+  </defs>
+
+  <!-- Transparent canvas; the platform may supply its own surrounding material. -->
+  <g filter="url(#app-shadow)">
+    <path d="M512 44C694 44 794 44 865 82C936 120 976 190 976 316V708C976 834 936 904 865 942C794 980 694 980 512 980C330 980 230 980 159 942C88 904 48 834 48 708V316C48 190 88 120 159 82C230 44 330 44 512 44Z" fill="url(#app-surface)"/>
+    <path d="M512 54C691 54 788 54 860 91C925 126 966 190 966 316V708C966 829 927 895 860 933C788 970 691 970 512 970C333 970 236 970 164 933C97 895 58 829 58 708V316C58 190 99 126 164 91C236 54 333 54 512 54Z" fill="none" stroke="#FFFFFF" stroke-opacity="0.84" stroke-width="6"/>
+  </g>
+
+  <!-- The retro rainbow survives as the exposed edges of a photo stack. -->
+  <g filter="url(#card-shadow)">
+    <use href="#photo-card" transform="translate(322 194)" fill="#30D158"/>
+    <use href="#photo-card" transform="translate(304 218)" fill="#FFD60A"/>
+    <use href="#photo-card" transform="translate(286 242)" fill="#FF9F0A"/>
+    <use href="#photo-card" transform="translate(268 266)" fill="#FF453A"/>
+    <use href="#photo-card" transform="translate(250 290)" fill="#BF5AF2"/>
+    <use href="#photo-card" transform="translate(232 314)" fill="#0A84FF"/>
+  </g>
+
+  <!-- Front card: unmistakably a photograph, quiet enough to remain legible at 16 px. -->
+  <g filter="url(#card-shadow)">
+    <use href="#photo-card" transform="translate(214 338)" fill="#FFFFFF"/>
+    <use href="#photo-card" transform="translate(214 338)" fill="none" stroke="#D1D1D6" stroke-width="5"/>
+  </g>
+
+  <g clip-path="url(#photo-window-clip)">
+    <rect x="258" y="390" width="432" height="260" fill="url(#photo-sky)"/>
+    <circle cx="604" cy="458" r="34" fill="#FFD60A"/>
+    <path d="M218 650L364 486C378 470 397 470 411 487L558 650H218Z" fill="url(#blue-mountain)"/>
+    <path d="M398 650L520 518C534 503 551 503 566 518L700 650H398Z" fill="url(#green-mountain)"/>
+    <path d="M258 610C354 580 442 601 516 622C584 642 644 626 706 602V674H250L258 610Z" fill="#FFFFFF" fill-opacity="0.22"/>
+  </g>
+  <path d="M330 390H618C665 390 690 415 690 462V578C690 625 665 650 618 650H330C283 650 258 625 258 578V462C258 415 283 390 330 390Z" fill="none" stroke="#FFFFFF" stroke-opacity="0.72" stroke-width="5"/>
+
+  <path d="M274 694H470" stroke="#3A3A3C" stroke-width="18" stroke-linecap="round"/>
+  <path d="M274 730H398" stroke="#AEAEB2" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- Blue sparkle = automatic classification, kept separate from the rainbow reference. -->
+  <g filter="url(#badge-shadow)">
+    <path d="M48 0H72C103 0 120 17 120 48V72C120 103 103 120 72 120H48C17 120 0 103 0 72V48C0 17 17 0 48 0Z" transform="translate(720 252)" fill="#007AFF"/>
+    <path d="M48 0H72C103 0 120 17 120 48V72C120 103 103 120 72 120H48C17 120 0 103 0 72V48C0 17 17 0 48 0Z" transform="translate(720 252)" fill="none" stroke="#FFFFFF" stroke-width="8"/>
+  </g>
+  <path d="M780 274C784 297 795 308 818 312C795 316 784 327 780 350C776 327 765 316 742 312C765 308 776 297 780 274Z" fill="#FFFFFF"/>
+  <circle cx="820" cy="284" r="8" fill="#FFFFFF"/>
+</svg>

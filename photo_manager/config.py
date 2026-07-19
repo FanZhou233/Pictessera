@@ -1,0 +1,104 @@
+"""Central application configuration.
+
+Keeping policy and tuning values here makes them reusable by the UI, media
+services, and future command-line tools without importing the GUI entrypoint.
+"""
+
+# File discovery
+RECURSIVE = True
+IMAGE_EXTENSIONS = {".heic", ".heif", ".jpg", ".jpeg", ".png"}
+VIDEO_EXTENSIONS = {".mov"}
+IMAGE_PRIORITY = [".heic", ".heif", ".jpg", ".jpeg", ".png"]
+
+# Layout
+ICON_SIZE = 118
+GRID_SIZE = 134
+GRID_SPACING = 8
+TABLE_ICON_SIZE = 96
+TABLE_ROW_HEIGHT = TABLE_ICON_SIZE + 16
+
+# Interaction and animation
+GRID_SINGLE_CLICK_SELECTION_DELAY_MS = 90
+TABLE_SINGLE_CLICK_SELECTION_DELAY_MS = 35
+PRESS_PREVIEW_ANIM_MS = 420
+CHECK_ANIM_MS = 390
+DESELECT_ANIM_MS = 420
+PRESS_DOWN_ANIM_MS = 130
+PRESS_RELEASE_ANIM_MS = 280
+PRESS_EFFECT_ANIM_MS = PRESS_RELEASE_ANIM_MS
+ENABLE_WINDOWS_HIGH_RES_TIMERS = True
+ANIMATION_TIMER_OVERSAMPLE = 3.0
+ANIMATION_TIMER_MIN_MS = 1
+ANIMATION_TIMER_MAX_MS = 6
+
+# Background work and LIVE Photo previews
+THUMB_WORKERS = 3
+META_WORKERS = 2
+LIVE_WORKERS = 2
+THUMB_FLUSH_BATCH = 120
+LIVE_PREVIEW_FPS = 10
+LIVE_PREVIEW_FRAME_COUNT = 16
+LIVE_PREVIEW_DECODE_TIMEOUT = 5
+DETAIL_LIVE_FAST_FRAME_COUNT = 14
+DETAIL_LIVE_FAST_MAX_LONG = 640
+DETAIL_LIVE_FAST_TIMEOUT = 3
+DETAIL_LIVE_HQ_FRAME_COUNT = 24
+DETAIL_LIVE_HQ_MAX_LONG = 1280
+DETAIL_LIVE_HQ_SIZE = (DETAIL_LIVE_HQ_MAX_LONG, DETAIL_LIVE_HQ_MAX_LONG)
+DETAIL_LIVE_HQ_TIMEOUT = 7
+DETAIL_LIVE_PLAYBACK_INTERVAL_MS = 42
+
+# Theme
+APP_BG = "#F7F7F8"
+APP_BG_2 = "#EEEEF0"
+APP_PANEL = "#FFFFFF"
+APP_PANEL_2 = "#F5F5F7"
+TOOLBAR_BG = APP_PANEL
+PROGRESS_BG = APP_PANEL
+BUTTON_OUTER_BG = APP_PANEL
+APP_BORDER = "#D9D9DE"
+APP_TEXT = "#1D1D1F"
+APP_MUTED = "#6E6E73"
+DETAIL_VIEW_BG = "#F5F5F7"
+WINDOW_SHADOW_MARGIN = 0
+DETAIL_SHADOW_MARGIN = 0
+
+# Front-end design tokens
+SYSTEM_GRAY_1 = "#F2F2F7"
+SYSTEM_GRAY_2 = "#E5E5EA"
+SYSTEM_GRAY_3 = "#D1D1D6"
+SYSTEM_GRAY_4 = "#C7C7CC"
+SYSTEM_GRAY_5 = "#AEAEB2"
+SYSTEM_GRAY_6 = "#8E8E93"
+ACCENT_BLUE = "#007AFF"
+ACCENT_BLUE_DARK = "#0A84FF"
+UI_RADIUS_6 = 6
+UI_RADIUS_8 = 8
+UI_RADIUS_10 = 10
+UI_SPACE_4 = 4
+UI_SPACE_8 = 8
+UI_SPACE_12 = 12
+UI_SPACE_16 = 16
+UI_SEPARATOR = "rgba(0, 0, 0, 0.08)"
+SIDEBAR_BG = "#F2F2F4"
+CONTENT_BG = "#FFFFFF"
+
+# Persistent state
+STATE_VERSION = 1
+# Keep the package name stable for compatibility; this is the public product
+# identity used by the desktop application and build artifacts.
+PRODUCT_DISPLAY_NAME = "Pictessera Photos"
+
+# A first launch after upgrading migrates PhotoMoverQt_Data to this directory.
+APP_STATE_DIR_NAME = "Pictessera_Data"
+LEGACY_APP_STATE_DIR_NAMES = ("PhotoMoverQt_Data",)
+TRASH_STATE_FILE_NAME = "trash_state.json"
+TRASH_JOURNAL_FILE_NAME = "trash_journal.jsonl"
+ITEM_INFO_CACHE_FILE_NAME = "item_info_cache.json"
+MOV_BINDINGS_FILE_NAME = "mov_bindings.json"
+UNDO_SESSION_FILE_NAME = "undo_redo_session.tmp.jsonl"
+UNDO_HISTORY_LIMIT = 1024
+THUMB_CACHE_DIR_NAME = "thumbs"
+DELETED_ITEMS_DIR_NAME = "已删除"
+JSON_BACKUP_SUFFIX = ".bak"
+JSON_CORRUPT_SUFFIX = ".corrupt"

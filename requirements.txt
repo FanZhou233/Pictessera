@@ -1,0 +1,20 @@
+# Core / lightweight edition
+# Install with: python -m pip install -r requirements.txt
+
+PySide6==6.7.3
+Pillow==10.2.0
+pillow-heif==0.18.0
+PyInstaller==6.21.0
+
+# The lightweight Pictessera.spec intentionally excludes the packages below.
+# Install them only when developing or packaging the Plus edition:
+#
+# numpy==1.24.3
+# opencv-python==4.9.0.80
+# imageio==2.19.3
+# imageio-ffmpeg==0.6.0
+#
+# Optional local AI/content recognition (Plus only; very large):
+# torch==2.6.0
+# transformers==4.28.1
+# huggingface-hub==0.14.1
